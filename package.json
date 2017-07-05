@@ -1,0 +1,19 @@
+{
+  "name": "daily",
+  "version": "1.0.0",
+  "description": "知乎日报 rss",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "compression": "^1.6.2",
+    "express": "^4.15.3",
+    "ioredis": "^3.1.1",
+    "lodash": "^4.17.4",
+    "pug": "^2.0.0-rc.2",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1"
+  }
+}

@@ -1,0 +1,22 @@
+doctype xml
+feed(xmlns='http://www.w3.org/2005/Atom')
+    title 知乎日报
+    subTitle 在中国，资讯类移动应用的人均阅读时长是 5 分钟，而在知乎日报，这个数字是 21。
+    link(href='https://daily.uuuz.io/atom.xml', rel='self')
+    link(href='https://daily.zhihu.com/')
+    id= date
+    - var isoDate = new Date(date.replace(/(.{4})(.{2})(.{2})/, '$1-$2-$3')).toISOString()
+    updated= isoDate
+    each story in stories
+        entry
+            title= story.title
+            link= story.share_url
+            link(rel='alternate', type='text/html', href= story.share_url)
+            id= story.id
+            updated= isoDate
+            content(type='html')
+                <![CDATA[!{story.css.map(c => `<link rel="stylesheet" href="${c}"/>`) + story.body + story.js.map(j => `<script src="${j}"></script>`)}]]>
+            if story.section
+                category= story.section.name
+            author
+                name 知乎日报
