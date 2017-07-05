@@ -1,10 +1,10 @@
-# zhihu_daily_rss
+# Zhihu Daily RSS
 
 一个抓取知乎日报内容，提供 rss 服务的程序...
 
-### dependencies
-Redis
-Node.js > 7.6 or use babel diy
+### Dependencies
+- Redis
+- Node.js > 7.6 or use babel diy
 
 ### Usage
 1. clone it
